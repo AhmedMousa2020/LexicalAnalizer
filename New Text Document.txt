@@ -1,0 +1,9 @@
+int computefact(int num){
+int factorial;
+for(num < 0){return factorial;}
+else {
+	int i;
+	i=0;
+	
+}
+}

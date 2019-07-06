@@ -1,0 +1,65 @@
+<INT> : int
+
+<ID> : val
+
+<ASSIGN_OPERATOR> : =
+
+<INTEGRAL_LITERAL> : 3
+
+<ASTERICK> : *
+
+<INTEGRAL_LITERAL> : 9
+
+<PLUS> : +
+
+<INTEGRAL_LITERAL> : 8
+
+<DIVIDE> : /
+
+<INTEGRAL_LITERAL> : 7
+
+<SEMICOLON> : ;
+
+<INT> : int
+
+<ERROR_TERM> : 33v
+
+<SEMICOLON> : ;
+
+<INT> : int
+
+<ERROR_TERM> : v3.4
+
+<SEMICOLON> : ;
+
+<MULTI_COMMENT> : /*
+if(f>4)
+f=1;
+*/
+
+<SINGLE_COMMENT> : // "q" /**/
+
+<CHAR_LITERAL> : '\\'
+
+<ID> : string
+
+<ID> : xx
+
+<ASSIGN_OPERATOR> : =
+
+<STRING_LITERAL> : "int x = 1;"
+
+<FLOAT> : float
+
+<ID> : dd
+
+<ASSIGN_OPERATOR> : =
+
+<FLOAT_LITERAL> : 3.2
+
+<PLUS> : +
+
+<FLOAT_LITERAL> : 6.5
+
+<SEMICOLON> : ;
+

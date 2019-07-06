@@ -1,0 +1,59 @@
+﻿1program = decl_list->decl decl_list_dash
+
+2decl_list_dash->decl decl_list_dash|null
+
+3decl → var_decl | fun_decl
+
+4var_decl->type_spec IDENT var_decl_dash
+type_spec → VOID | BOOL | INT | FLOAT
+var_decl_dash->;|[];
+
+5fun_decl → type_spec IDENT ( params ) compound_stmt
+type_spec → VOID | BOOL | INT | FLOAT
+
+6params → param_list | null
+
+7pram_list->param param_list_dash
+8param_list_dash-> , param param_list_dash|null
+
+9param → type_spec IDENT param_dash
+type_spec → VOID | BOOL | INT | FLOAT
+param_dash->[]|null
+
+10stmt_list → stmt_list stmt | ε
+
+11stmt → expr_stmt | compound_stmt | if_stmt | while_stmt | return_stmt | break_stmt
+
+12expr_stmt → expr ; | ;
+
+
+13while_stmt → WHILE ( expr ) stmt
+
+14compound_stmt → { local_decls stmt_list }
+
+
+15local_decls → var_decl local_decls | ε
+
+16if_stmt → IF ( expr ) stmt if_stmt_dash 
+17if_dash->ELSE stmt|null
+
+18return_stmt → RETURN expr_stmt
+
+
+
+19expr -> IDENT expr2 expr_dash | ! expr expr_dash | - expr expr_dash | + expr expr_dash | BOOL_LIT expr_dash |
+ INT_LIT expr_dash | FLOAT_LIT expr_dash | NEW type_spec [expr] expr_dash
+
+20expr_dash  -> expr3 expr_dash | empty
+21expr2  -> = expr | [expr] expr4 | (args) | .size | empty
+
+22expr3  -> OR expr | EQ expr | NE expr | LE expr | < expr | GE expr | > expr | AND expr | + expr | - expr | * expr |
+ / expr | % expr
+23expr4  -> expr | empty
+
+
+
+24arg_list -> expr arg_list_dash
+25arg_list_dash -> ,expr arg_list_dash | null
+
+26args → arg_list | ε

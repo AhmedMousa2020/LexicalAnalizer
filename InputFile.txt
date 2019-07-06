@@ -1,0 +1,14 @@
+int computefact(int num){
+int factorial;
+factorial = 1;
+if(num < 0){return factorial;}
+else {
+	int x;
+	if(x<0){
+}
+	return factorial;*/
+}
+
+	
+
+}
